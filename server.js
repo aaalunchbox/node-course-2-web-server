@@ -47,11 +47,17 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects',
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'You suck!'
     });
-})
+});
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
